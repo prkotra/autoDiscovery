@@ -1,0 +1,11 @@
+[Unit]
+Description=Virtusa Autodiscovery Service
+After=multi-user.target
+
+[Service]
+Type=idle
+ExecStart=/usr/bin/python /autoDiscovery/rabitmq_mangodb/Systemmetrics.py
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
